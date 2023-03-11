@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../static/static.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- USER REGISTRATION -->
+            <div class="col-6">
+                <div class="form-box">
+                    <h1 class="mb-5 text-center">Registration Form</h1>
+                    <form  method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="name">Full Name:</label>
+                                    <input type="text" class="form-control" name="name" id="name" />
+                                </div>
+                            </div>
+                            
+                                <div class="col">
+                                    <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" name="email" id="email" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="text" class="form-control" name="phone" id="phone" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" class="form-control" name="password" id="password" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="password">Profile Pic:</label>
+                                    <input type="file" class="form-control" id="profile" name="profile" />
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-5 mb-5">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- REGISTERED USER -->
+            <div class="col-6">
+                <div class="form-box">
+                    <h1>Registered Users</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th>Profile Pic</th>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col"> view</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users %}
+                            <tr>
+                                <td scope="row">{{loop.index}}</td>
+                                <td>
+                                    <div class="circular">
+                                        <img src="data:image/png;base64,{{ user['profile_picture'] }}" alt="">
+                                    </div>
+                                </td>
+                                <td>{{user['name']}}</td>
+                                <td>{{user['email']}}</td>
+                                <td>{{user['phone']}}</td>
+                                <td><a href="/user-details/{{user['id']}}">View</a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/G"></script>
+</body>
+
+</html>

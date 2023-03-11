@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(to left, #9933ff 0%, #ff99ff 100%);
+    font-family: 'Times New Roman', Times, serif;
+		}
+
+
+  .form-box {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: 50px;
+  }
+
+  .form-box h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .form-box input[type="text"],
+  .form-box input[type="email"],
+  .form-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  .form-box input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-box input[type="submit"]:hover {
+    background-color: #218838;
+  }
+
+  @media (min-width: 576px) {
+    .form-box {
+      /* max-width: 500px; */
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+  }
+
+  .circular { /* need to give parent container equal width and height*/
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow:hidden;
+}
+.circular img{
+    width:100%;
+}
