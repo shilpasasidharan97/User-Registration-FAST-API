@@ -13,8 +13,7 @@ PROJECT 1 :
 REGISTRATION-postgreSQL-MongoDB
   This program is a user registration system developed in FastAPI that utilizes two databases - PostgreSQL and MongoDB. The registration process requires the user to provide their Full Name, Email, Password, Phone number, and Profile picture. The user's First Name, Password, Email, and Phone number are stored in PostgreSQL, while their Profile picture is stored in MongoDB. 
 Installation :
-  1. Clone the repository to your local machine using the following command:
-        git clone https://github.com/shilpasasidharan97/User-Registration-FAST-API.git
+  1. Clone the repository to your local machine using the following command:git clone https://github.com/shilpasasidharan97/User-Registration-FAST-API.git
   2. Change the Directiory to REGISTRATION-postgreSQL-MongoDB using the command :
         cd REGISTRATION-postgreSQL-MongoDB
   3. Create a virtual environment. For example, you can use virtualenv by running the command: 
